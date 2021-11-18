@@ -48,9 +48,18 @@
         <activity
             android:name=".Category.Technology"
             android:label="Technology" />
+
+        <activity android:name=".NoteMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Notes"/>
+        <activity android:name=".NoteActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Notes"/>
         <activity
             android:name=".DetailActivity"
-            android:label="Detail News" />
+            android:label="NewsApps" />
+
+
     </application>
 
 </manifest>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edit_text_background"
+    android:orientation="vertical"
+    tools:context=".NoteActivity">
+
+    <!-- Custom toolbar -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:theme="@style/customToolbar">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/edit_note"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="@string/save_note"
+            android:src="@drawable/ic_save" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/note_name_hint"
+        android:inputType="text"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/edit_text_background"
+        android:gravity="start"
+        android:hint="@string/note_message_hint"
+        android:inputType="textMultiLine"
+        android:padding="5dp"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

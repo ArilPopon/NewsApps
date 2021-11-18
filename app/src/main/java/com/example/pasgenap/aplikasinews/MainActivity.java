@@ -207,6 +207,10 @@ public class MainActivity extends AppCompatActivity
             startActivity(tech);
 
 
+        }  else if (id == R.id.note) {
+            Intent not = new Intent(MainActivity.this, NoteMainActivity.class);
+            startActivity(not);;
+
         } else if (id == R.id.logout) {
             logout();
         }

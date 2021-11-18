@@ -13,6 +13,9 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText username, password;
     Button btnLogin;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,8 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
         btnLogin = (Button)findViewById(R.id.btnLogin);
 
+
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                 String usernameKey = username.getText().toString();
                 String passwordKey = password.getText().toString();
 
-                if (usernameKey.equals("humam") && passwordKey.equals("humam")){
+                if (usernameKey.equals("12345") && passwordKey.equals("12345")){
                     //jika login berhasil
                     Toast.makeText(getApplicationContext(), "LOGIN SUKSES",
                             Toast.LENGTH_SHORT).show();

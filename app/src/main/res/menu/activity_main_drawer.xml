@@ -28,15 +28,30 @@
             android:id="@+id/technology"
             android:title="Technology"
             android:icon="@drawable/ic_technology"/>
+
+
+
+
+
     </group>
 
-    <item android:title="Keluar">
+
+
+    <item android:title="-_-_-_">
         <menu>
-            
+
+            <item
+                android:id="@+id/note"
+                android:title="Note"
+                android:icon="@drawable/ic_add"/>
+
+
             <item
                 android:id="@+id/logout"
-                android:icon="@drawable/ic_logout"
-                android:title="Logout" />
+                android:title="Logout"
+                android:icon="@drawable/ic_logout"/>
+
+
         </menu>
     </item>
 
