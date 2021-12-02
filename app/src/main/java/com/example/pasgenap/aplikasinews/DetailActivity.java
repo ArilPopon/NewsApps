@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,7 +23,10 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimary));
 
         img = getIntent().getStringExtra("imgNews");
         judul = getIntent().getStringExtra("titleNews");
@@ -34,7 +38,7 @@ public class DetailActivity extends AppCompatActivity {
         bindView();
 
         Glide.with(getApplicationContext())
-                .load(img).apply(new RequestOptions().placeholder(R.drawable.img_default_bg))
+                .load(img).apply(new RequestOptions().placeholder(R.drawable.noimg))
                 .into(tvImg);
         tvJudul.setText(judul);
         tvDeskripsi.setText(deskripsi);

@@ -29,7 +29,7 @@
                     android:layout_width="88dp"
                     android:layout_height="88dp"
                     android:layout_marginRight="8dp"
-                    android:scaleType="center" />
+                    android:scaleType="centerCrop" />
 
                 <TextView
                     android:id="@+id/judul"
