@@ -14,6 +14,8 @@ public class NoteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
+
+
         //Initialization
         final DatabaseHandler dbHandler = new DatabaseHandler(getApplicationContext());
         final EditText name = findViewById(R.id.name);

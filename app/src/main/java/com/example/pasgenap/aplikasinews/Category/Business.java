@@ -38,6 +38,8 @@ public class Business extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business);
 
+
+
         news = findViewById(R.id.news);
         api = Server.getApiService();
         adapter = new NewsAdapter(Business.this, list);

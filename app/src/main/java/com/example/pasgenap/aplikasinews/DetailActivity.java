@@ -1,10 +1,10 @@
 package com.example.pasgenap.aplikasinews;
 
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +21,8 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         img = getIntent().getStringExtra("imgNews");
         judul = getIntent().getStringExtra("titleNews");
@@ -45,7 +47,9 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     public void sumber (View view) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(sumber)));
+        Intent intent = new Intent(getApplicationContext(),webview.class);
+        intent.putExtra("sumber",sumber);
+        startActivity(intent);
     }
 
     public void bindView(){

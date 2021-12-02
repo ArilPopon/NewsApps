@@ -40,7 +40,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final News news = list.get(position);
-        Glide.with(context).load(news.getImgNews()).apply(new RequestOptions().placeholder(R.drawable.img_default_bg).circleCrop())
+        Glide.with(context).load(news.getImgNews()).apply(new RequestOptions().placeholder(R.drawable.noimg))
                 .into(holder.gmb);
         holder.judul.setText(news.getTitleNews());
         holder.tgl.setText(news.getDateNews().substring(0, 10) + " " + news.getDateNews().substring(11, 16));
@@ -70,7 +70,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
                 i.putExtra("sourceNews", news.getSourceNews());
                 context.startActivity(i);
                 ((Activity) context).overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+
             }
+
         });
     }
 

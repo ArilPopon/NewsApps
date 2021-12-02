@@ -154,12 +154,13 @@ public class MainActivity extends AppCompatActivity
     private void logout(){
         //Creating an alert dialog to confirm logout
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Anda yakin ingin keluar ?");
-        alertDialogBuilder.setPositiveButton("Ya",
+        alertDialogBuilder.setMessage("Anda Yakin Ingin Keluar ?");
+        alertDialogBuilder.setPositiveButton("Iya",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface arg0, int arg1) {
-                        moveTaskToBack(true);
+                        Intent bus = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(bus);
                     }
                 });
 
@@ -209,10 +210,11 @@ public class MainActivity extends AppCompatActivity
 
         }  else if (id == R.id.note) {
             Intent not = new Intent(MainActivity.this, NoteMainActivity.class);
-            startActivity(not);;
+            startActivity(not);
 
         } else if (id == R.id.logout) {
             logout();
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
